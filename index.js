@@ -7,7 +7,8 @@ const app = express();
 const Thing = require("./models/thing");
 const bodyParser = require('body-parser');
 
-mongoose.connect('mongodb+srv://Steven:BuCA699XqJjmMR3@cluster0.jsc3k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+mongoose.connect('mongodb+srv://StevenEsteban:mKW-u98-GWEgxGm@cluster0.6toon.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
     .then(() => {
         console.log('Connected to MongoDB Atlas!');
     })
@@ -21,6 +22,7 @@ app.use(express.json())
 app.use("/static", express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
+
 
 // pages
 app.get('/', (req, res) => {
@@ -49,6 +51,62 @@ app.post('/api/something', (req, res, next) => {
             res.status(201).json({
                 message: 'New thing saved, gg'
             })
+        }
+    ).catch(
+        (error) => {
+            res.status(400).json({
+                error: error
+            });
+        }
+    );
+});
+
+app.get('/api/something/:id', (req, res, next) => {
+    Thing.findOne({
+        _id: req.params.id
+    }).then(
+        (thing) => {
+            res.status(200).json(thing);
+        }
+    ).catch(
+        (error) => {
+            res.status(400).json({
+                error: error
+            });
+        }
+    );
+});
+
+app.put('/api/something/:id', (req, res, next) => {
+    const thing = new Thing({
+        _id: req.params.id,
+        userId: req.body.userId,
+        title: req.body.title,
+        description: req.body.description,
+        imageUrl: req.body.imageUrl
+
+    });
+    Thing.updateOne({ _id: req.params.id }, thing).then(
+        () => {
+            res.status(201).json({
+                message: 'Thing updated'
+            });
+        }
+    ).catch(
+        (error) => {
+            res.status(400).json({
+                error: error
+            });
+        }
+    );
+});
+
+app.delete('/api/stuff/:id', (req, res, next) => {
+    Thing.deleteOne({ _id: req.params.id }).then(
+        () => {
+            res.status(200).json({
+                message: 'Deleted!'
+            });
         }
     ).catch(
         (error) => {
