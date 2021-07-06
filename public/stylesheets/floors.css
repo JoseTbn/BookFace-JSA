@@ -1,0 +1,18 @@
+.circlePp {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+}
+.createPost {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+}
+.pad20v {
+    padding: 20px;
+}
+.addIcon {
+    color: #1B3251;
+}

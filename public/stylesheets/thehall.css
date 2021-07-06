@@ -1,0 +1,46 @@
+.suppmoi {
+    height: 20px;
+}
+.tHall {
+    font-size: 36px;
+}
+.promptTitle {
+    font-family: 'Prompt', sans-serif;
+    text-align: center;
+    color: #1B3251;
+    margin-bottom: 20px;
+}
+.hallMainBox {
+    height: 100vh;
+    margin-top: 40px;
+}
+.searchBar {
+    display: flex;
+    justify-content: center;
+}
+.feedBox {
+    margin: 0px 40px;
+}
+.articleHall {
+    border: 1px solid #1B3251;
+    border-radius: 5px;
+    padding: 20px; 
+    margin: 40px 0px;
+}
+.profilArticle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #A0E1E6;
+}
+.titleArticle {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    color: #49D1DA;
+    padding-bottom: 5px;
+}
+.articleContent {
+    font-size: 12px;
+}

@@ -15,6 +15,13 @@ app.get('/',(req, res) => {
   res.render('home.ejs');
 });
 
+app.get('/thehall',(req, res) => {
+  res.render('thehall.ejs');
+});
+app.get('/floors',(req, res) => {
+  res.render('floors.ejs');
+});
+
 
 
 
