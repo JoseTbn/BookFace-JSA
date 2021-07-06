@@ -9,7 +9,7 @@
   font-weight: normal;
 }
 body {
-  background-color: #394743;
+  background-color: #f7f7f7;
 }
 .marg20v {
   margin: 20px 0px;
@@ -29,8 +29,6 @@ body {
   background-color: #7db3b794;
 }
 .homeMainBox {
-  background-color: #394743;
-  height: 100vh;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
@@ -44,10 +42,10 @@ body {
 .styleInput {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #EAEAEA;;
+  border-bottom: 1px solid #1B3251;;
   text-align: center;
   width: 120px;
-  color: #EAEAEA;
+  color: #1B3251;
 }
 .fsBlueMain {
   font-family: 'Prompt', sans-serif;
@@ -56,6 +54,6 @@ body {
 }
 .fsPoppinsWhite {
   font-family: 'Poppins', sans-serif;
-  color: #EAEAEA;
+  color: #1B3251;
 
 }

@@ -7,7 +7,7 @@
 .promptTitle {
     font-family: 'Prompt', sans-serif;
     text-align: center;
-    color: #E5E5E5;
+    color: #1B3251;
     margin-bottom: 20px;
 }
 .hallMainBox {
@@ -22,8 +22,8 @@
     margin: 0px 40px;
 }
 .articleHall {
-    border: 1px solid #EAEAEA;
-    border-radius: 20px;
+    border: 1px solid #1B3251;
+    border-radius: 5px;
     padding: 20px; 
     margin: 40px 0px;
 }
